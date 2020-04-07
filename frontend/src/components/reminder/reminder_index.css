@@ -1,0 +1,53 @@
+#reminder-index-page {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.welcome-header {
+    font-size: 24px;
+    height: 20px;
+    margin: 0 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-student-button {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #feb72b;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid grey;
+    cursor: pointer;
+    height: 45px;
+}
+
+.create-student-button:hover {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #feb72b;
+    opacity: 50%;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.reminder-index-header {
+    margin-left: 40px;
+    margin-top: 40px;
+    font-family: sans-serif;
+}
+
+.reminder-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}

@@ -12,6 +12,7 @@ class SignupForm extends React.Component {
       mobile: "",
       password: "",
       password2: "",
+      schoolId: "",
       demoParent: false,
       demoAdmin: false,
       errors: {}
@@ -80,29 +81,21 @@ class SignupForm extends React.Component {
   }
 
   render() {
+    
     return (
       <div className="signup-form-page">
         <div className="signup-form-container">
+          <div className="form-title">Sign up</div>
+
+          
           <form onSubmit={this.handleSubmit} className="signup-form-box">
-            <div className="form-title">Sign up</div>
             <div className="signup-form">
               <div className="form-header-signup">
                 <a href="#/signup">Sign Up</a>
                 <a href="#/login">Log in</a>
               </div>
 
-              <button
-                className="demo-login-button"
-                onClick={() => this.demoAdminLogin()}
-              >
-                Demo Login as Admin
-              </button>
-              <button
-                className="demo-login-button"
-                onClick={() => this.demoParentLogin()}
-              >
-                Demo Login as Parent
-              </button>
+              
 
               <div className="input-fields">
                 <div className="input-fields-left">
@@ -153,10 +146,36 @@ class SignupForm extends React.Component {
                   />
                 </div>
               </div>
+                  <input
+                    type="text"
+                    value={this.state.schoolId}
+                    onChange={this.update("schoolId")}
+                    placeholder="School ID"
+                    className="signup-input"
+                  />
               <div className="session-error-messages">
                 {this.renderErrors()}
               </div>
               <input type="submit" value="Sign up" className="session-submit" />
+            </div>
+            <div className="demo-login-buttons">
+              <div className="orLine">
+                <p>OR</p>
+              </div>
+              <div className="demoButtons">
+                <button
+                  className="demo-login-button"
+                  onClick={() => this.demoAdminLogin()}
+                >
+                  Demo Login as Admin
+                </button>
+                <button
+                  className="demo-login-button"
+                  onClick={() => this.demoParentLogin()}
+                >
+                  Demo Login as Parent
+                </button>
+              </div>
             </div>
           </form>
         </div>

@@ -23,11 +23,15 @@
   },
   "homepage": "https://github.com/jcolla-holla/SchoolForce#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
     "express": "^4.17.1",
+    "fontawesome": "^5.6.3",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "mongoose": "^5.9.2",
@@ -36,12 +40,12 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "validator": "^12.2.0",
     "webpack": "^4.41.5"
   },
   "devDependencies": {
+    "redux-logger": "^3.0.6",
     "nodemon": "^2.0.2"
   }
 }

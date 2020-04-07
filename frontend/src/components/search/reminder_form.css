@@ -1,16 +1,17 @@
 #reminderForm {
-    font-family: sofia-pro, sans-serif;
+    font-family: sans-serif;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 #reminderForm .reminderSubmitForm {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
-    width: 40%;
+    min-width: 500px;
     align-items: center;
 }
 
@@ -29,6 +30,7 @@
     height: 100px;
     margin-left: 20px;
     margin-top: 10px;
+    padding-left: 10px;
     /* border-radius: 2px; */
 }
 
@@ -37,6 +39,7 @@
     height: 40px;
     margin-left: 26px;
     margin-top: 10px;
+    padding-left: 10px;
     /* border-radius: 2px; */
 }
 
@@ -50,8 +53,7 @@
     width: 140px;
     padding: 10px;
     font-size: 14px;
-    font-weight: bold;
-    background-color: #feb72b;
+    background-color: #527318;
     color: floralwhite;
     border-radius: 4px;
 }
@@ -64,17 +66,17 @@
 }
 
 #reminderForm .demoSubmitForm {
-    width: 30%;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: -50px;
     align-items: center;
 }
 
 #reminderForm .demoSubmitTitle {
     display: flex;
     font-weight: bold;
+    padding-left: 14px;
 }
 
 .demoSubmitForm input {
@@ -83,14 +85,14 @@
     width: 80%;
     height: 40px;
     display: flex;
+    padding-left: 10px;
 }
 
 .demoSubmitForm .demoSubmitButton {
     width: 200px;
     padding: 10px;
     font-size: 14px;
-    font-weight: bold;
-    background-color: #feb72b;
+    background-color: #527318;
     color: floralwhite;
     border-radius: 4px;
 }
@@ -123,6 +125,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 0px;
 }
 
 #reminderForm .recipientsList li {

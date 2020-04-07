@@ -1,13 +1,31 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: "sofia-pro";
+    font-family: "sans-serif";
     font-size: 14px;
     margin: 0;
 }
 
+.demo-login-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.demoButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.orLine {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .demo-login-button {
-    width: 500px;
+    width: 200px;
     font-weight: 500;
     font-size: 16px;
     display: flex;
@@ -21,21 +39,24 @@ body {
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer;
     border: none;    
-    color: gray;
-    background-color: #ffe75e;
+    color: white;
+    background-color: #282828;
 }
 
 .demo-login-button:hover {
     color: white;
-    background-color: #feb72b;
-    transition: background-color 0.5s;
+    background-color: #527318;
+    transition: background-color 0.2s;
 }
 
 .login-form-page {
     box-sizing: border-box;
     display: block;
+    margin-top: 80px;
 }
 
 .login-page-header {
@@ -54,7 +75,7 @@ body {
 
 .login-page-header-left {
     box-sizing: border-box;
-    font-family: sofia-pro, sans-serif;
+    font-family: sans-serif;
     padding-left: 20px;
     text-decoration: none;
     color: white;
@@ -67,16 +88,18 @@ body {
 }
 
 .header-logo {
-    font-family: sofia-pro, sans-serif;
+    font-family: sans-serif;
     color: black;
 }
 
 .login-form-container {
     display: flex;
     justify-content: center;
-    margin-top: 55px;
+    margin-top: 80px;
     box-sizing: border-box;
     margin-bottom: 200px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-form-box {
@@ -112,7 +135,7 @@ body {
 .form-header-login a {
     height: 40.5px;
     border-bottom: 1px solid rgba(22,24,35,0.2);
-    font-family: sofia-pro, sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     width: 100%;
     font-size: 15px;
@@ -145,9 +168,10 @@ body {
     box-sizing: border-box;
     border-bottom: 1px solid rgba(22,24,35,0.2);
     font-size: 14px;
-    font-family: sofia-pro, sans-serif;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: 400;
+    text-align: center;
 }
 
 .session-error-messages {
@@ -157,10 +181,11 @@ body {
 }
 
 .session-submit {
-    color: rgba(22,24,35,0.3);
+    color: white;
+    width: 500px;
     font-weight: 500;
     font-size: 16px;
-    background-color: rgba(22,24,35,0.06);
+    background-color: #899857;
     display: flex;
     align-items: center;
     -webkit-box-pack: center;
@@ -173,10 +198,10 @@ body {
     margin-top: 30px;
     cursor: pointer;
     border: none;
-    transition: background-color 0.5s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .session-submit:hover {
-    background-color: #feb72b;
+    background-color: #527318;
     color: white;
 }

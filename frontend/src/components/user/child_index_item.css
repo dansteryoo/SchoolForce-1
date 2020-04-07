@@ -1,0 +1,106 @@
+body {
+    font-family: sans-serif
+}
+
+.studentLi {
+    margin: 10px;
+    border-style: double;
+    border-collapse: inherit;
+    padding: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.student-name {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.student-info {
+    display: flex;
+}
+
+.student-info div {
+    margin: 10px;
+}
+
+.student-info .title {
+    font-weight: bold;
+     font-size: 14px;
+}
+
+.student-info p {
+    /* this margin: 0px; resets something inherited I can't figure out - Jesse */
+    font-size: 12px;
+}
+
+.student-index-item-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.child-index-item-button{
+    display: flex;
+}
+
+.child-index-item-button a {
+    text-decoration: none;
+}
+
+.update-child-index-button {
+    background-color: #034687;
+    width: 150px;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid black;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.5;
+    justify-content: right;
+    margin: -50px 0 20px;
+    filter: brightness(1.3);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.update-child-index-button:hover {
+    background-color: lightskyblue;
+    border-radius: 6px;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.delete-child-index-button {
+    background-color: #034687;
+    width: 150px;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid black;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.5;
+    justify-content: right;
+    margin: -100px 0 20px;
+    filter: brightness(1.3);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.delete-child-index-button:hover {
+    background-color: lightskyblue;
+    border-radius: 6px;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+}

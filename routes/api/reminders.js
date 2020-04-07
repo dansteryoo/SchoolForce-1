@@ -5,7 +5,9 @@ const config = require('../../config/keys')
 const passport = require('passport')
 const client = require('../../frontend/node_modules/twilio/index')(config.accountSid, config.authToken);
 
-const validateReminderInput = require('../../validation/reminder');
+
+const validateReminderInput = require('../../validation/reminder.js');
+
 
 router.get("/test", (req, res) => res.json({ msg: "This is the reminders route" }));
 
@@ -26,13 +28,12 @@ router.get('/:id', (req, res) => {
 router.post('/new',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-
         const { errors, isValid } = validateReminderInput(req.body);
 
         if (!isValid) {
             return res.status(400).json(errors);
         }
-
+        
         let newReminder = new Reminder({
             title: req.body.title,
             body: req.body.body,
@@ -53,7 +54,7 @@ router.post('/new',
                             res.status(200).send('Reminder was successfully sent');
                         })
                         .catch((err) => {
-                            console.error(err);
+                            console.error(err),
                             res.status(500).send();
                         })
 });

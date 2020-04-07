@@ -5,18 +5,82 @@
     align-items: center;
     width: 100%;
     height: 60px;
-    background-color: #527318;
+    background-color: #282828;
     border-bottom: 1px solid black;
-    font-family: sofia-pro, sans-serif;
+    font-family: sans-serif;
+   position: fixed;
+   z-index: 2;
+   overflow: hidden;
 }
 
-#nav-bar-container .navbar-logo {
+
+/* I don't this this affects anything: - Jesse */
+/* .nav-links {
+    margin-right: 160px;
+    margin-left: -20px;
+}
+
+.nav-links a {
+    position: relative;
+    padding: 30px;
+    font-family: sans-serif;
+    text-decoration: none;
     color: white;
-    margin-left: 50px;
-    font-family: sofia-pro, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.5s ease all .3s;
+} */
+
+
+
+.nav-links a:before{
+    content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  top: 57px;
+  background-color: #feb72b;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-links a:hover:before{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+#nav-bar-container .navbar-logo {
+    color: #feb72b;
+    /* margin-left: 120px; */
+    font-family: sans-serif;
     text-decoration: none;
     font-size: 30px;
     font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: start;
+    width: 10vmin;
+    margin-left: 5vmin;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar-logo {
+        font-size: 20px;
+        margin-left: 0px;
+        color: blue;
+    }
 }
 
 
@@ -24,59 +88,100 @@
     padding: 10px;
     color: white;
     text-decoration: none;
-    background-color: black;
-    margin-right: 50px;
+    background: linear-gradient(#899857, #527318);
+    margin-right: 20px;
+     box-shadow: inset 0 1px 1px #899857;
     font-size: 14px;
     border: none;
-    border-radius: 4px;
-    /* IMPROVEMENT: some kind of non-silly shadowing */
-    /* box-shadow: 4px 2px 2px #ffe75e; */
+    border-radius: 4px; 
 }
 
 
 #nav-bar-container .logoutLink:hover {
     cursor: pointer;
+    background: #527318;
+    box-shadow: none;
 }
 
 #nav-bar-container .signupLink {
     padding: 10px;
     color: white;
     text-decoration: none;
-    background-color: black;
+    background: linear-gradient(#899857, #527318);
     margin-right: 20px;
+     box-shadow: inset 0 1px 1px #899857;
     font-size: 14px;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px; 
 }
+
+
+#nav-bar-container .signupLink:hover {
+    background: #527318;
+    box-shadow: none;
+}
+
+
 
 #nav-bar-container .loginLink {
     padding: 10px;
     color: white;
     text-decoration: none;
-    background-color: black;
+    background: linear-gradient(#899857, #527318);
+    margin-right: 80px;
+     box-shadow: inset 0 1px 1px #899857;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;  
+}
+
+#nav-bar-container .loginLink:hover {
+    background: #527318;
+    box-shadow: none;
+}
+
+.ourTeamLink {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    background-color: white;
     margin-right: 50px;
     font-size: 14px;
     border: none;
     border-radius: 4px;
+    font-weight: bold;
+    position: relative;
 }
 
-
-/* Jeesse notee: not sure any of the below actually affeects anything */
-/* .Links1 {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
+.ourTeamLink:hover {
+    color: white;
+    background-image: url("../../assets/rainbow_gif.gif");
 }
 
-.Links2 {
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-} */
+.ourTeamLink:hover::after {
+  content: "We are developers for hire!" ;
+  position: absolute ;
+  top: 4em ;
+  left: -10em ;
+  min-width: 200px ;
+  border: 1px #808080 solid ;
+  padding: 8px ;
+  color: white ;
+  background-color: #527318 ;
+  z-index: 1 ;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+    .signupLink {
+      display: none;
+    }
+
+    .loginLink {
+      display: none;
+    }
 
 
-/* .login-page-header {
-    background-color: green;
-} */
+}
 
 
