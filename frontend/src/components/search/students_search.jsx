@@ -82,6 +82,7 @@ class StudentsSearch extends React.Component {
         }
 
         if (student) {
+<<<<<<< HEAD
             namevar = (student.firstName.toLowerCase().indexOf(this.state.query.text.toLowerCase()) !== -1 ||
                 student.lastName.toLowerCase().indexOf(this.state.query.text.toLowerCase()) !== -1);
         }
@@ -89,6 +90,23 @@ class StudentsSearch extends React.Component {
         if (this.state.query.gender) {
             
             gendervar = student.gender.toLowerCase() === this.state.query.gender.toLowerCase();
+=======
+            let searchQuery = this.state.query.text.toLowerCase();
+            // debugger
+            // console.log("the search query is" + searchQuery);
+          // console.log("the first name  is" + student.firstName);
+          // console.log("the last name  is" + student.lastName);
+
+            namevar = (
+              student.firstName.toLowerCase().includes(searchQuery)
+              ||
+              student.lastName.toLowerCase().includes(searchQuery)
+            );
+        }
+
+        if (this.state.query.gender) {
+          gendervar = (student.gender === this.state.query.gender);
+>>>>>>> pr/2
         };
 
         if (this.state.query.grade) {
@@ -100,6 +118,7 @@ class StudentsSearch extends React.Component {
     };
 
     handleAllCheck (filteredStudents) {
+<<<<<<< HEAD
         if (Object.keys(this.state.selectedStudents).length === 0) {
             let newSelectedStudents = {}
             filteredStudents.forEach( student => { 
@@ -114,13 +133,36 @@ class StudentsSearch extends React.Component {
             this.setState(newState);
         } 
     }
+=======
+        if (Object.keys(this.state.selectedStudents).length === filteredStudents.length) {
+          let newState = Object.assign({}, this.state, {selectedStudents: {}, checkedAll: false});
+          this.setState(newState);
+        } else {
+           
+          let newSelectedStudents = {}
+          filteredStudents.forEach( student => { 
+              newSelectedStudents = Object.assign({}, newSelectedStudents, { [student._id]: student });
+              
+          });
+          let newState = Object.assign({}, this.state, { selectedStudents: newSelectedStudents, checkedAll: true });
+          this.setState(newState);
+        } 
+    }
+    
+>>>>>>> pr/2
 
     handleSortClick = (type, func) => {  
         this.setState({sortType: type, sortFunc: func})
     }
+<<<<<<< HEAD
 
     render() {
 
+=======
+
+    render() {
+
+>>>>>>> pr/2
         let filteredStudents = [];
         let filteredParentsArr = [];
         if (this.props.students[0]) {
@@ -138,6 +180,8 @@ class StudentsSearch extends React.Component {
 
            filteredStudents = filteredStudents.quickSort(this.state.sortType, this.state.sortFunc);
           
+<<<<<<< HEAD
+=======
         }
         
         function noDups(arr) {
@@ -159,8 +203,33 @@ class StudentsSearch extends React.Component {
           }
 
           return noDuplicates
+>>>>>>> pr/2
+        }
+        
+        function noDups(arr) {
+
+          // // array of all student ids
+          // let studentIds = arr.map(ids => ids._id);
+          // // arrray of all unique ids (no dups)
+          // let uniqueIds = studentIds.filter((ids, index) => studentIds.indexOf(ids) >= index);
+          let uniqueIds = [];
+          let noDuplicates = [];
+
+          for (let i = 0; i < arr.length; i++) {
+            let dupCheck = arr[i]._id
+
+            if (!uniqueIds.includes(dupCheck)) {
+              uniqueIds.push(dupCheck)
+              noDuplicates.push(arr[i])
+            }
+          }
+
+<<<<<<< HEAD
+          return noDuplicates
         }
 
+=======
+>>>>>>> pr/2
         let noDupChildren = noDups(filteredStudents)
 
         const userAdminId = this.props.adminUserId;
@@ -274,9 +343,15 @@ class StudentsSearch extends React.Component {
 
                             <option value="" disabled selected value>Gender</option>
                             <option value="">All</option>
+<<<<<<< HEAD
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option> 
+=======
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option> 
+>>>>>>> pr/2
                         </select>
                         <label className="gradeContainer">
                         <select className='genderSelect' value={`${this.state.query.grade}`} onChange={this.filterUpdate('grade')}>
